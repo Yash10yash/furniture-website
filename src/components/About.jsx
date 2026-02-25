@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const bullets = [
     'Over 10 years of crafting premium furniture',
@@ -92,28 +92,6 @@ const About = () => {
                             ))}
                         </ul>
 
-                        {/* CTA Button */}
-                        <motion.button
-                            whileHover={{ scale: 1.04, boxShadow: '0 8px 24px rgba(249,191,41,0.35)' }}
-                            whileTap={{ scale: 0.97 }}
-                            style={{
-                                backgroundColor: '#F9BF29',
-                                color: '#2F2F2F',
-                                border: 'none',
-                                cursor: 'pointer',
-                                padding: '0.875rem 2rem',
-                                borderRadius: '8px',
-                                fontWeight: 700,
-                                fontSize: '0.9rem',
-                                fontFamily: 'Poppins, sans-serif',
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '8px',
-                                transition: 'box-shadow 0.3s ease',
-                            }}
-                        >
-                            Discover Our Story <ArrowRight size={16} />
-                        </motion.button>
                     </motion.div>
 
                     {/* Right — Image */}

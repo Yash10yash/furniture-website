@@ -15,8 +15,8 @@ const Navbar = () => {
         { label: 'Home', route: '/', id: null },
         { label: 'About us', route: '/about', id: null },
         { label: 'Shop', route: '/shop', id: null },
-        { label: 'Blog', route: null, id: 'blog' },
-        { label: 'Contact us', route: null, id: 'contact' },
+        { label: 'Blog', route: '/blog', id: null },
+        { label: 'Contact us', route: '/contact', id: null },
     ];
 
     // Derive active label from current URL path

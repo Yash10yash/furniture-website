@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { getProducts } from '../api/products';
 
 const fallbackProducts = [
@@ -10,6 +11,7 @@ const fallbackProducts = [
 ];
 
 const ProductCard = ({ product, index }) => {
+    const navigate = useNavigate();
     const [hovered, setHovered] = useState(false);
 
     return (
@@ -18,6 +20,7 @@ const ProductCard = ({ product, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.15, duration: 0.6 }}
+            onClick={() => navigate(`/product/${product._id}`)}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{
@@ -85,6 +88,7 @@ const ProductCard = ({ product, index }) => {
 };
 
 const Products = () => {
+    const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -145,6 +149,7 @@ const Products = () => {
                     style={{ textAlign: 'center', marginTop: '3rem' }}
                 >
                     <button
+                        onClick={() => navigate('/shop')}
                         style={{
                             backgroundColor: 'transparent', color: '#3B5D50',
                             border: '2px solid #3B5D50', borderRadius: '6px',

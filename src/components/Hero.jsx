@@ -68,16 +68,22 @@ const Hero = () => {
                                 Shop Now <ArrowRight size={16} />
                             </button>
 
-                            <button style={{
-                                backgroundColor: 'transparent', color: '#fff',
-                                padding: '0.875rem 2rem', borderRadius: '6px',
-                                border: '2px solid #fff', cursor: 'pointer',
-                                fontWeight: 600, fontSize: '0.9rem',
-                                fontFamily: 'Poppins, sans-serif',
-                                transition: 'background 0.2s, color 0.2s',
-                            }}
+                            <button
+                                onClick={() => navigate('/shop')}
                                 onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#fff'; e.currentTarget.style.color = '#3B5D50'; }}
                                 onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#fff'; }}
+                                style={{
+                                    backgroundColor: 'transparent',
+                                    color: '#fff',
+                                    padding: '0.875rem 2rem',
+                                    borderRadius: '6px',
+                                    border: '2px solid #fff',
+                                    cursor: 'pointer',
+                                    fontWeight: 600,
+                                    fontSize: '0.9rem',
+                                    fontFamily: 'Poppins, sans-serif',
+                                    transition: 'background 0.2s, color 0.2s',
+                                }}
                             >
                                 Explore
                             </button>
